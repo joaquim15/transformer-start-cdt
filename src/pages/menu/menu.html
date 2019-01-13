@@ -1,15 +1,18 @@
 <ion-header>
   <ion-navbar color="primary">
-
+    <ion-title>
+      <strong>CONFIGURAÇÕES</strong>
+    </ion-title>
   </ion-navbar>
 </ion-header>
+
 <ion-content>
   <ion-list no-margin>
     <ion-item>
       <ion-avatar item-start>
         <img src="assets/img/doug_funny.jpg">
       </ion-avatar>
-      <h2 ion-text class="text-secondary bold">Joaquim de Castro Moura</h2>
+      <h2 ion-text class="text-secondary bold">Doug Fanny</h2>
       <p ion-text class="text-secondary bold">Programador</p>
     </ion-item>
   </ion-list>
@@ -39,7 +42,7 @@
         <ion-icon name="md-information-circle" class="icons-space"></ion-icon>
       Sobre o App (Versão 0.0.1)
     </button>
-    <button ion-item (click)="closeMenu()">
+    <button ion-item (click)="logout()">
         <ion-icon name="md-log-out" class="icons-space"></ion-icon>
       Sair
     </button>

@@ -6,6 +6,7 @@ import { NotificationsPage } from "../notifications/notifications";
 import { SettingsPage } from "../settings/settings";
 import { MenuPage } from "../menu/menu";
 import { SearchLocationPage } from "../search-location/search-location";
+import { CardDetailPage } from "../card-detail/card-detail";
 
 
 @Component({
@@ -22,16 +23,19 @@ export class CardPage {
 
   cards = [
     {
+      id: '1',
       name: 'Doug Fanny',
       numberCard: '1111.xxxx.xxxx.1111',
       postImageUrl: 'assets/img/card/visa.png'
     },
     {
+      id: '2',
       name: 'Doug Fanny',
       numberCard: '2222.xxxx.xxxx.2222',
       postImageUrl: 'assets/img/card/master.png'
     },
     {
+      id: '3',
       name: 'Doug Fanny',
       numberCard: '33333.xxxx.xxxx.3333',
       postImageUrl: 'assets/img/card/elo.png'
@@ -70,8 +74,13 @@ export class CardPage {
     this.nav.push(SettingsPage);
   }
 
-  avatarTapped(card) {
-    alert(card.name + ' avatar was tapped.');
+  openDetailCard(card) {
+    this.nav.push(CardDetailPage, {
+      id: card.id,
+      name: card.name,
+      number: card.numberCard,
+      bandeira: card.postImageUrl
+    });
   }
 
   presentNotifications(myEvent) {

@@ -1,12 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the CardDetailPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { Storage } from '@ionic/storage';
 
 @IonicPage()
 @Component({
@@ -15,7 +9,27 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class CardDetailPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  id: string;
+  name: string;
+  numberCard: string;
+  bandeira: string;
+
+  constructor(public storage: Storage, public navCtrl: NavController, public navParams: NavParams) {
+
+    this.id = navParams.get("id"); // "andrewmcgivery"
+    this.name = navParams.get("name"); // "andrewmcgivery"
+    this.numberCard = navParams.get("number"); // "andrewmcgivery"
+    this.bandeira = navParams.get("bandeira");
+
+    if (this.id !== null) {
+      console.log('id: ' + this.id);
+      console.log('Name: ' + this.name);
+      console.log('Numero Card: ' + this.numberCard);
+      console.log('Bandeira: ' + this.bandeira);
+    } else {
+      console.log('Valor 1: ' + this.id);
+    }
+
   }
 
   ionViewDidLoad() {

@@ -27,4 +27,9 @@ export class MenuPage {
   openTermoUso() {
     this.nav.push(TermoPage);
   }
+
+    // logout
+    logout() {
+      this.nav.setRoot(LoginPage);
+    }
 }

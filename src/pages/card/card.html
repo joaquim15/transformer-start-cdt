@@ -1,31 +1,17 @@
 <ion-header>
   <ion-navbar color="primary">
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>
-      <strong>CARTÕES</strong>
-    </ion-title>
+    <ion-title end>CARTÕES</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding class="animated fadeIn common-bg">
-
   <ion-card no-margin margin-bottom class="full-width" *ngFor="let card of cards">
-    <ion-item>
+    <ion-item (click)="openDetailCard(card)">
       <ion-avatar item-start>
-        <img [src]="card.postImageUrl" (click)="avatarTapped(card)">
+        <img [src]="card.postImageUrl">
       </ion-avatar>
       <h2>{{card.name}}</h2>
       <p>{{card.numberCard}}</p>
     </ion-item>
-
   </ion-card>
-
-  <!--ion-card *ngFor="let card of cards" (click)="cardTapped(card)">
-    <img [src]="card.postImageUrl" />
-    <div class="card-title">{{card.name}}</div>
-    <div class="card-subtitle">{{card.numberCard}}</div>
-  </ion-card -->
-
 </ion-content>
