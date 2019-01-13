@@ -1,7 +1,7 @@
 import {Component} from "@angular/core";
 import {NavController} from "ionic-angular";
 import {LoginPage} from "../login/login";
-import {HomePage} from "../home/home";
+import {CardPage} from "../card/card";
 
 
 @Component({
@@ -15,7 +15,7 @@ export class RegisterPage {
 
   // register and go to home page
   register() {
-    this.nav.setRoot(HomePage);
+    this.nav.setRoot(CardPage);
   }
 
   // go to login page

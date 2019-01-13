@@ -16,37 +16,30 @@ import {MyApp} from "./app.component";
 
 import {SettingsPage} from "../pages/settings/settings";
 import {CheckoutTripPage} from "../pages/checkout-trip/checkout-trip";
-import {HomePage} from "../pages/home/home";
+import {CardPage} from "../pages/card/card";
 import {LoginPage} from "../pages/login/login";
 import {NotificationsPage} from "../pages/notifications/notifications";
 import {RegisterPage} from "../pages/register/register";
 import {SearchLocationPage} from "../pages/search-location/search-location";
 import {TripDetailPage} from "../pages/trip-detail/trip-detail";
-import {TripsPage} from "../pages/trips/trips";
+import {MenuPage} from "../pages/menu/menu";
 import {LocalWeatherPage} from "../pages/local-weather/local-weather";
 import { TabsPage } from '../pages/tabs/tabs';
 import { TermoPage } from '../pages/termo/termo';
-
-// import services
-// end import services
-// end import services
-
-// import pages
-// end import pages
 
 @NgModule({
   declarations: [
     MyApp,
     SettingsPage,
     CheckoutTripPage,
-    HomePage,
+    CardPage,
     LoginPage,
     LocalWeatherPage,
     NotificationsPage,
     RegisterPage,
     SearchLocationPage,
     TripDetailPage,
-    TripsPage,
+    MenuPage,
     TabsPage,
     TermoPage,
   ],
@@ -68,14 +61,14 @@ import { TermoPage } from '../pages/termo/termo';
     MyApp,
     SettingsPage,
     CheckoutTripPage,
-    HomePage,
+    CardPage,
     LoginPage,
     LocalWeatherPage,
     NotificationsPage,
     RegisterPage,
     SearchLocationPage,
     TripDetailPage,
-    TripsPage,
+    MenuPage,
     TabsPage,
     TermoPage,
   ],
