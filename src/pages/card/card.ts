@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { NavController, PopoverController } from "ionic-angular";
+import { NavController, PopoverController, AlertController } from "ionic-angular";
 import { Storage } from '@ionic/storage';
 
 import { NotificationsPage } from "../notifications/notifications";
@@ -42,7 +42,10 @@ export class CardPage {
     },
   ];
 
-  constructor(private storage: Storage, public nav: NavController, public popoverCtrl: PopoverController) {
+  constructor(private storage: Storage,
+    public nav: NavController,
+    public popoverCtrl: PopoverController,
+    public alertCtrl: AlertController) {
   }
 
   ionViewWillEnter() {
@@ -91,6 +94,33 @@ export class CardPage {
     });
   }
 
-}
+  addNewCard() {
+    const alert = this.alertCtrl.create({
+      title: 'Cadastro novo Cartão',
+      //message: 'Enter a name for this new album you\'re so keen on adding',
+      inputs: [
+        {
+          name: 'title',
+          placeholder: 'Nº Cartão'
+        },
+      ],
+      buttons: [
+        {
+          text: 'Cancel',
+          handler: (data: any) => {
+            console.log('Cancel clicked');
+          }
+        },
+        {
+          text: 'Save',
+          handler: (data: any) => {
+            console.log('Saved clicked', data);
+          }
+        }
+      ]
+    });
 
+    alert.present();
+  }
+}
 //
