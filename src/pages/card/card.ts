@@ -70,6 +70,10 @@ export class CardPage {
     this.nav.push(SettingsPage);
   }
 
+  avatarTapped(card) {
+    alert(card.name + ' avatar was tapped.');
+  }
+
   presentNotifications(myEvent) {
     console.log(myEvent);
     let popover = this.popoverCtrl.create(NotificationsPage);
