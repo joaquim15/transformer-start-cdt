@@ -1,7 +1,6 @@
-import {Component} from "@angular/core";
-import {NavController, AlertController, ToastController, MenuController} from "ionic-angular";
-import {HomePage} from "../home/home";
-import {RegisterPage} from "../register/register";
+import { Component } from "@angular/core";
+import { NavController, AlertController, ToastController, MenuController } from "ionic-angular";
+import { TabsPage } from "../tabs/tabs";
 
 @Component({
   selector: 'page-login',
@@ -13,20 +12,14 @@ export class LoginPage {
     this.menu.swipeEnable(false);
   }
 
-  // go to register page
-  register() {
-    this.nav.setRoot(RegisterPage);
-  }
-
-  // login and go to home page
   login() {
-    this.nav.setRoot(HomePage);
+    this.nav.setRoot(TabsPage);
   }
 
   forgotPass() {
     let forgot = this.forgotCtrl.create({
-      title: 'Forgot Password?',
-      message: "Enter you email address to send a reset link password.",
+      title: 'Esqueceu sua Senha?',
+      message: "Digite seu endereço de e-mail para enviar uma senha de redefinição do link.",
       inputs: [
         {
           name: 'email',
@@ -36,17 +29,17 @@ export class LoginPage {
       ],
       buttons: [
         {
-          text: 'Cancel',
+          text: 'Cancelar',
           handler: data => {
             console.log('Cancel clicked');
           }
         },
         {
-          text: 'Send',
+          text: 'Enviar',
           handler: data => {
             console.log('Send clicked');
             let toast = this.toastCtrl.create({
-              message: 'Email was sended successfully',
+              message: 'O email foi enviado com sucesso',
               duration: 3000,
               position: 'top',
               cssClass: 'dark-trans',

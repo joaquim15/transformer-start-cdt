@@ -1,36 +1,47 @@
-<!-- -->
 <ion-header>
   <ion-navbar color="primary">
-    <ion-title>
-      <span ion-text>Activities</span>
-    </ion-title>
+
   </ion-navbar>
-
-  <!--  -->
-  <ion-toolbar padding color="light">
-    <p ion-text no-margin class="text-white">
-      <strong>4</strong> results found!
-    </p>
-  </ion-toolbar>
-
 </ion-header>
-
-<ion-content padding class="trips detail-bg">
-  <!--list of trips-->
-  <div class="trip card" *ngFor="let trip of trips" tappable (click)="viewDetail(trip.id)" margin-bottom>
-    <div class="background border-bottom" [ngStyle]="{'background-image': 'url(' + trip.thumb + ')'}">
-      <div class="background-filter rlt">
-        <div class="align-bottom" padding-left padding-right>
-          <h6 class="pull-left text-white" ion-text>{{ trip.name }}</h6>
-          <h6 class="pull-right text-white" ion-text>{{ trip.price_adult | currency:'USD':true }}</h6>
-          <div class="clear"></div>
-        </div>
-      </div>
-    </div>
-    <div class="padding-sm primary-bg">
-      <ion-icon name="time" class="text-white"></ion-icon>
-      <span ion-text class="text-white">{{ trip.time }}</span>
-      <span class="pull-right" ion-text color="light"><strong>per adult</strong> (childs has <span ion-text  class="text-green bold">50% OFF</span>)</span>
-    </div>
-  </div>
+<ion-content>
+  <ion-list no-margin>
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="assets/img/doug_funny.jpg">
+      </ion-avatar>
+      <h2 ion-text class="text-secondary bold">Joaquim de Castro Moura</h2>
+      <p ion-text class="text-secondary bold">Programador</p>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <hr />
+    <button ion-item (click)="openPage()">
+      <ion-icon name="md-mail" class="icons-space"></ion-icon>
+      Mensagens
+    </button>
+    <button ion-item (click)="openPage()">
+      <ion-icon name="megaphone" class="icons-space"></ion-icon>
+      Fale Conosco
+    </button>
+    <button ion-item (click)="openPage()">
+        <ion-icon name="md-warning" class="icons-space"></ion-icon>
+      Perguntas Frequentes
+    </button>
+    <button ion-item (click)="openTermoUso()">
+        <ion-icon name="document" class="icons-space"></ion-icon>
+      Termos de Uso
+    </button>
+    <button ion-item (click)="closeMenu()">
+        <ion-icon name="md-key" class="icons-space"></ion-icon>
+      Trocar Senha
+    </button>
+    <button ion-item (click)="closeMenu()">
+        <ion-icon name="md-information-circle" class="icons-space"></ion-icon>
+      Sobre o App (Versão 0.0.1)
+    </button>
+    <button ion-item (click)="closeMenu()">
+        <ion-icon name="md-log-out" class="icons-space"></ion-icon>
+      Sair
+    </button>
+  </ion-list>
 </ion-content>
