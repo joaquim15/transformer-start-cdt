@@ -10,8 +10,8 @@
       <ion-avatar item-start>
         <img [src]="card.postImageUrl">
       </ion-avatar>
-      <h2>{{card.name}}</h2>
-      <p>{{card.numberCard}}</p>
+      <h2>{{card.tpCard}}</h2>
+      <p>R$ {{card.saldo}}</p>
     </ion-item>
   </ion-card>
   <button ion-button color="secondary" block (click)="addNewCard()">ADIONAR NOVO CARTÃO</button>

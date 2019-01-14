@@ -24,22 +24,28 @@ export class CardPage {
   cards = [
     {
       id: '1',
-      name: 'Doug Fanny',
+      tpCard: 'PRÉ PAGO',
+      name: 'Doug Fanny, Doug Fanny, Doug Fanny',
       numberCard: '1111.xxxx.xxxx.1111',
-      postImageUrl: 'assets/img/card/visa.png'
+      postImageUrl: 'assets/img/card/green-card.png',
+      saldo: '340,00'
     },
     {
       id: '2',
+      tpCard: 'A...',
       name: 'Doug Fanny',
       numberCard: '2222.xxxx.xxxx.2222',
-      postImageUrl: 'assets/img/card/master.png'
+      postImageUrl: 'assets/img/card/green-card.png',
+      saldo: '0,00'
     },
     {
       id: '3',
+      tpCard: 'B...',
       name: 'Doug Fanny',
-      numberCard: '33333.xxxx.xxxx.3333',
-      postImageUrl: 'assets/img/card/elo.png'
-    },
+      numberCard: '3333.xxxx.xxxx.3333',
+      postImageUrl: 'assets/img/card/green-card.png',
+      saldo: '245,00'
+    }
   ];
 
   constructor(private storage: Storage,
@@ -82,7 +88,9 @@ export class CardPage {
       id: card.id,
       name: card.name,
       number: card.numberCard,
-      bandeira: card.postImageUrl
+      bandeira: card.postImageUrl,
+      tpCard: card.tpCard,
+      saldo: card.saldo
     });
   }
 

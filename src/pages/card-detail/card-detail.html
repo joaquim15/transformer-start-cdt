@@ -5,8 +5,31 @@
 </ion-header>
 
 <ion-content padding class="animated fadeIn common-bg">
-  <h2>{{id}}</h2>
-  <h2>{{name}}</h2>
-  <h2>{{numberCard}}</h2>
-  <p>{{bandeira}}</p>
+
+  <div class="row responsive-sm">
+    <div class="col col-90">
+      <h2 style="color:black;">Titular</h2>
+      <h2>{{name}}</h2>
+    </div>
+    <div class="col col-90">
+      <h2 style="color:black;">Nº cartão:</h2>
+      <h2> {{numberCard}}</h2>
+    </div>
+    <div class="col col-90">
+      <h2 style="color:black;">Bandeira</h2>
+      <h2>{{bandeira}}</h2>
+    </div>
+    <div class="col col-90">
+      <h2 style="color:black;">Saldo</h2>
+      <h2> R$ {{saldo}}</h2>
+    </div>
+    <div class="col col-90">
+      <h2 style="color:black;">Tipo de Cartão</h2>
+      <h2>{{tpCard}}</h2>
+    </div>
+  </div>
+
+
+
+
 </ion-content>

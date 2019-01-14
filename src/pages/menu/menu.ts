@@ -18,18 +18,15 @@ export class MenuPage {
   register() {
     this.nav.push(CardPage);
   }
-
-  // go to login page
   login() {
     this.nav.push(LoginPage);
   }
-
   openTermoUso() {
     this.nav.push(TermoPage);
   }
-
-    // logout
-    logout() {
-      this.nav.setRoot(LoginPage);
-    }
+  logout() {
+   // this.nav.goToRoot(LoginPage);
+    this.nav.setRoot(LoginPage, [],
+      { duration: 1000, animation: "android-transition", animate: true });
+  }
 }
